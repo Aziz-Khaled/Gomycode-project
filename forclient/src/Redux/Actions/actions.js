@@ -3,7 +3,7 @@ import axios from 'axios'
 
 
 
-export const SignUp = (userData) => async (dispatch) => {
+export const SignUp = (userData,History) => async (dispatch) => {
 try {
     const SignUpUsers = await axios.post('http://localhost:5000/SignUp',userData)
     dispatch(
@@ -11,9 +11,10 @@ try {
         payload : SignUpUsers ,
 })
 localStorage.setItem('token', SignUpUsers.data.token)
+History.push('/Login')
 } catch (error) {
     console.log(error)
-    
+        
 }
 }
 

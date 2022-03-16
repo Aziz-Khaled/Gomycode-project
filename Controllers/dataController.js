@@ -52,10 +52,10 @@ exports.AddingTours = async (req, res)  => {
     try {
         const addingNewTour = new Trip (req.body) 
         await addingNewTour.save()
-        res.status (200).send({msg: "tour added" , addingNewTour})
+        return res.status (200).send({msg: "tour added" , addingNewTour})
          
     } catch (error) {
-        res.status (400).send({msg: "failed to add"}, error)
+        return res.status (400).send({msg: "failed to add"}, error)
         
     }
 }
@@ -65,10 +65,10 @@ exports.displayingTours = async (req, res)  => {
     try {
         const viewTour =  await Trip.find();
       
-        res.status (200).send({msg: "tour added" , viewTour})
+        return res.status (200).send({msg: "tour added" , viewTour})
         
     } catch (error) {
-        res.status (400).send({msg: "failed to add"}, error)
+        return res.status (400).send({msg: "failed to add"}, error)
         
     }
 }
@@ -79,10 +79,10 @@ exports.displayingOneTour = async (req, res)  => {
     try {
         const oneTour =  await Trip.findById(id);
       
-        res.status (200).send({msg: "tour added" , oneTour})
+        return res.status (200).send({msg: "tour added" , oneTour})
         
     } catch (error) {
-        res.status (400).send({msg: "failed to add"}, error)
+        return res.status (400).send({msg: "failed to add"}, error)
         
     }
 }
@@ -93,10 +93,10 @@ exports.deleteTour = async (req, res)  => {
     try {
         const oneTour =  await Trip.findByIdAndDelete(id);
     
-        res.status (200).send({msg: "tour deleted"})
+        return res.status (200).send({msg: "tour deleted"})
         
     } catch (error) {
-        res.status (400).send({msg: "failed to delete"}, error)
+        return res.status (400).send({msg: "failed to delete"}, error)
         
     }
 }

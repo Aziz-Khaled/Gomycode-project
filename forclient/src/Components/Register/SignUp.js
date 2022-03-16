@@ -3,9 +3,11 @@ import './register.css'
 import {useDispatch} from 'react-redux'
 import {SignUp} from "../../Redux/Actions/actions"
 import Admin from '../admin/admin-addcard'
+import {useHistory} from 'react-router-dom'
 
 function SignUpp() {
   const dispatch= useDispatch()
+  const History = useHistory()
   const [email,setEmail] = useState('')
   const [password,setPassword] = useState('')
   const [phoneNumber,setPhoneNumber] = useState('')
@@ -13,7 +15,7 @@ function SignUpp() {
   const [name,setName] = useState('')
 
   const Submit = () => { 
-    dispatch(SignUp({email,password,phoneNumber,address,name}))
+    dispatch(SignUp({email,password,phoneNumber,address,name},History))
       }
   
   return (
@@ -87,7 +89,7 @@ function SignUpp() {
 </form>
 </section>
 
-<Admin/>
+
 </div>
 
   )

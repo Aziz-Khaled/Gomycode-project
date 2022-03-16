@@ -279,4 +279,37 @@
 }
 
 
- 
+   
+.detailsDesign{
+	background-color: black;
+}
+
+.offset-xl-1{
+	margin-left: 16px !important;
+}
+
+
+
+.row {
+	padding-top: 132px; ;
+	padding-bottom: 49px ;
+	margin-left: -147px ;
+
+}
+
+.device {
+	border-radius: 20px 40px;
+	width: '18rem' !important
+}
+
+.col-12 {
+	padding-top: 40px;
+}
+
+.detailFont{
+	color: whitesmoke;
+	font-family: 'Raleway' , sans-serif;
+}
+.d-lg-block {
+	margin-left: 51px;
+}

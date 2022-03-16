@@ -66,8 +66,8 @@ aria-describedby="basic-addon1"
 
     </Modal.Body>
     <Modal.Footer>
-      <Button variant="secondary" onClick={()=> deletPost()}>
-        Close
+      <Button variant="warning" onClick={()=> deletPost()}>
+        delete
       </Button>
       <Button variant="primary" onClick={() => AddingNewTrip()}>
         Save Changes

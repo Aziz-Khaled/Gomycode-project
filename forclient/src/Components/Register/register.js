@@ -1,6 +1,6 @@
 import React ,{useState} from 'react'
 import {useDispatch} from 'react-redux'
-import { Link,useHistory} from 'react-router-dom'
+import {Link,useHistory} from 'react-router-dom'
 import {SignIn} from '../../Redux/Actions/actions'
 import './register.css'
 

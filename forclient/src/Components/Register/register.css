@@ -75,12 +75,12 @@
 
 
 .signup-redirect{
-     margin-top: -63px;
-  margin-bottom: .5rem;
+  margin-top: -110px !important; 
+ 
   font-weight: 500;
   line-height: 1.2;
   position: absolute;
-  margin-left: 226px; 
+  margin-left: 220px !important; 
 
 }
 
